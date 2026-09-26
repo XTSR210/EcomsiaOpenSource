@@ -1,0 +1,25 @@
+name: ✨ Feature request
+description: Proposer une nouvelle brique générique ou une amélioration.
+labels: ["feature", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème à résoudre
+      description: Quel besoin concret, quel cas d'usage e-commerce ?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solution proposée
+      description: API imaginée, signature TypeScript, exemple d'usage.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Périmètre
+      options:
+        - label: Cette proposition reste générique (aucune donnée privée Ecomsia impliquée)
+          required: true

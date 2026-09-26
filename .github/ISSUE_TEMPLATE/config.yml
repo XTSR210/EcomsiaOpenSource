@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Question / entraide
+    url: https://github.com/XTSR210/EcomsiaOpenSource/discussions
+    about: Posez vos questions d'usage dans les Discussions.

@@ -1,0 +1,46 @@
+name: 🐞 Bug report
+description: Signaler un comportement inattendu dans une des briques du dépôt.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Merci de prendre le temps de remplir ce formulaire — un bon rapport = un fix rapide.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module concerné
+      options:
+        - src/product.ts (parsing produit)
+        - src/format.ts (formatage)
+        - src/text.ts (texte)
+        - src/rateLimit.ts (rate limiting)
+        - src/errors.ts (erreurs)
+        - src/seo.ts (SEO)
+        - ui/ (composants React)
+        - autre / je ne sais pas
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Que s'est-il passé ?
+      description: Comportement attendu vs obtenu.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction minimale
+      placeholder: |
+        ```ts
+        parsePrice("12,90") // obtenu : NaN, attendu : 12.9
+        ```
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / runtime
+      placeholder: "Node 22.3, Bun 1.2, Chrome 130…"
+    validations:
+      required: true
